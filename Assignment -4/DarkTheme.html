@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Toggle</title>
+    <style>
+        body, html {
+            margin: 0;
+            height: 100%;
+        }
+
+        /* Light Theme */
+        .day-theme {
+            background-color: white;
+            color: black;
+        }
+        .button-day {
+            background-color: lightgray;
+            color: black;
+            border: 1px solid gray;
+        }
+
+        /* Dark Theme */
+        .night-theme {
+            background-color: black;
+            color: gold;
+        }
+        .button-night {
+            background-color: darkblue;
+            color: white;
+            border: 1px solid gold;
+        }
+
+        #app {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="day-theme">
+    <div id="app">
+        <p>I am a HashedBit student, ready to become an awesome full stack developer</p>
+        <button id="toggle-btn" class="button-day" onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('night-theme');
+            document.body.classList.toggle('day-theme');
+
+            const button = document.getElementById('toggle-btn');
+            if (document.body.classList.contains('night-theme')) {
+                button.className = 'button-night';
+                button.textContent = 'Switch to Day Theme';
+            } else {
+                button.className = 'button-day';
+                button.textContent = 'Switch to Night Theme';
+            }
+        }
+    </script>
+</body>
+</html>

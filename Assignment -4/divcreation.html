@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+    <script>
+
+        function createDiv(width, height, text) {
+            const body = document.getElementById('container');
+            const myDiv = document.createElement("div");
+            myDiv.style.height = height;
+            myDiv.style.width = width;
+            myDiv.innerHTML = text;
+            myDiv.style.padding = "20px";
+            myDiv.style.margin = "auto";
+            myDiv.style.backgroundColor = 'blue';
+            body.appendChild(myDiv);
+
+        }
+        const text = "In today’s world, technology plays an essential role in shaping the way we live, work, and communicate. It has revolutionized access to information, making knowledge available at our fingertips, and connecting people across continents in real-time. From smartphones to artificial intelligence, technological advancements have transformed industries, improved medical care, and streamlined transportation. Despite these benefits, the rapid evolution of technology also raises important questions about privacy, security, and the balance between online and offline interactions. As we continue to integrate technology into every aspect of our lives, it becomes crucial to adopt responsible usage practices and consider its long-term impact on society. Embracing technology with a thoughtful approach can enhance our quality of life and open up opportunities we could only imagine a few decades ago.";
+        createDiv('500px', '300px', text);
+
+        // Do not change this code
+        Window.createDiv = createDiv;
+    </script>
+</body>
+
+</html>
